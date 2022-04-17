@@ -8,7 +8,7 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit {
-  user: any = {};
+  user: any = {id:'',name:{firstName: '', lastName: ''},address:{city: '', street: '',number:0,zipcode:''},email:'',username:'',password:'',phone:''};
   id: number = 0;
   constructor(private userservice: UsersService, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe((params: Params) => { this.id = params['id']; })
