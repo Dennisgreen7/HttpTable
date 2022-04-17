@@ -6,17 +6,15 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './components/table/table.component';
-import { MenuComponent } from './components/menu/menu.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 const appRoutes: Routes = [
-  { path: 'users', component: TableComponent },
+  { path: '', component: TableComponent },
   { path: 'users/info/:id', component: UserInfoComponent},
 ];
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    MenuComponent,
     UserInfoComponent
   ],
   imports: [
